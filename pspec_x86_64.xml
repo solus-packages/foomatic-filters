@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>foomatic-filters</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">Universal print filter &quot;foomatic-rip&quot;</Summary>
+        <Description xml:lang="en">The universal print filter &quot;foomatic-rip&quot;, used by spoolers to convert PostScript job data into the printer&apos;s native format as described by a printer/driver-specific PPD file.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>foomatic-filters</Name>
+        <Summary xml:lang="en">Universal print filter &quot;foomatic-rip&quot;</Summary>
+        <Description xml:lang="en">The universal print filter &quot;foomatic-rip&quot;, used by spoolers to convert PostScript job data into the printer&apos;s native format as described by a printer/driver-specific PPD file.
+</Description>
+        <PartOf>desktop.core</PartOf>
+        <RuntimeDependencies>
+            <Dependency>foomatic-db-engine</Dependency>
+            <Dependency>foomatic-db</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ppr</Path>
+            <Path fileType="library">/usr/lib/cups</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="config">/etc/foomatic/filter.conf.sample</Path>
+            <Path fileType="config">/etc/foomatic/filter.conf</Path>
+            <Path fileType="config">/etc/foomatic/direct</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-12-28</Date>
+            <Version>4.0.17</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+    </History>
+</PISI>
