@@ -1,0 +1,20 @@
+Description: foomatic-rip: SECURITY FIX: Also consider the back tick ('`') as
+ an illegal shell escape character. Thanks to Michal Kowalczyk from the Google
+ Security Team for the hint.
+ Add changes from upstream revision 7419.
+Author: Till Kamppeter <till.kamppeter@gmail.com>
+Bug-CVE: CVE-2015-8327
+Origin: upstream
+Last-Update: 2015-12-13
+
+--- a/util.c
++++ b/util.c
+@@ -31,7 +31,7 @@
+ #include <assert.h>
+ 
+ 
+-const char* shellescapes = "|<>&!$\'\"#*?()[]{}";
++const char* shellescapes = "|;<>&!$\'\"`#*?()[]{}";
+ 
+ const char * temp_dir()
+ {

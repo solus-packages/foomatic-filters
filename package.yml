@@ -1,6 +1,6 @@
 name       : foomatic-filters
 version    : 4.0.17
-release    : 1
+release    : 2
 source     :
     - http://www.openprinting.org/download/foomatic/foomatic-filters-4.0.17.tar.gz : a2e2e53e502571e88eeb9010c45a0d54671f15707ee104f5c9c22b59ea7a33e3
 license    : GPL-2.0
@@ -14,6 +14,7 @@ rundeps    :
     - foomatic-db-engine
     - foomatic-db
 setup      : |
+    %patch -p1 < $pkgfiles/security/cve-2015-8327.patch
     %configure --disable-static
 build      : |
     %make
